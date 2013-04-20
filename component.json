@@ -1,7 +1,6 @@
 {
-  "name": "defaults",
-  "repo": "avetisk/defaults",
-  "twitter": "@avetisk",
+  "name": "deeperDefaults",
+  "repo": "JayceTDE/deeperDefaults",
   "description": "Assigns enumerable properties of the default object(s) to the destination object for all destination properties that resolve to undefined.",
   "version": "0.0.1",
   "keywords": ["extend object", "defaults", "default values"],
