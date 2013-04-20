@@ -16,6 +16,9 @@ function defaults (dest, defaults) {
     if (! (prop in dest)) {
       dest[prop] = defaults[prop];
     }
+		if (dest[prop] instanceof Object && defaults[prop] instanceof Object) {
+			defaults(dest[prop], defaults[prop]);
+		}
   }
 
   return dest;
