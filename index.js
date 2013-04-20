@@ -11,13 +11,15 @@ module.exports = defaults;
  * @return {Object}
  * @api public
  */
-function defaults (dest, defaults) {
-  for (var prop in defaults) {
-    if (! (prop in dest)) {
-      dest[prop] = defaults[prop];
-    }
-		if (dest[prop] instanceof Object && defaults[prop] instanceof Object) {
-			defaults(dest[prop], defaults[prop]);
+function defaults (dest, src) {
+  for (var prop in src) {
+		if (src.hasOwnProperty(prop) {
+			if (! (prop in dest)) {
+				dest[prop] = src[prop];
+			}
+			if (dest[prop] instanceof Object && src[prop] instanceof Object) {
+				defaults(dest[prop], src[prop]);
+			}
 		}
   }
 
